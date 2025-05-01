@@ -4,7 +4,7 @@ function EventPopup({ locationName, address }) {
     return (
       <div className="event-container">
         <h1>Next Event Pop-up!</h1>
-        <span>{locationName}</span>
+        <span>{locationName}</span><span>, Nov 10-13/25</span>
         <p>
           <a
             href={`https://www.google.com/maps?q=${mapsQuery}`}

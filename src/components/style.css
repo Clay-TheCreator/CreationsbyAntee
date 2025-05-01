@@ -1,34 +1,78 @@
 /* Navbar Styling */
 .navbar {
-    position: sticky;
-    top: 0;
-    z-index: 1000; /* ensures it stays above other elements */
-    border-bottom: 1px solid black;
-    background-color: white;
-    padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid black;
+  background-color: #f7f4ef;
+  padding: 1rem 2rem;
+}
+
+.nav-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-left, .nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+}
+
+
+/* Mobile Navbar styles */
+.nav-right {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #f7f4ef;
+  padding: 1rem;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+/* Show nav-right only if menuOpen is true */
+.nav-right.open {
+  display: flex;
+}
+
+/* Desktop styles override */
+@media (min-width: 600px) {
+  .nav-right {
+    display: flex !important;
+    flex-direction: row;
+    position: static;
+    background: none;
+    box-shadow: none;
+    padding: 0;
   }
-  
-  .nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+  .hamburger {
+    display: none;
   }
-  
-  .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  
-  .nav-links {
-    display: flex;
-    gap: 1rem;
-  }
-  
-  .nav-link {
-    text-decoration: none;
-    color: black;
-    font-size: 1rem;
-  }
+}
   
 
 /* Home Styling */
@@ -49,7 +93,7 @@
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     margin: 2rem auto 0 auto;
-    
+    font-family: serif;
   }
   
   .event-container h1 {
@@ -81,7 +125,7 @@
 
   @media (min-width: 600px) and (max-width: 900px) {
     .most-popular-container {
-      grid-template-columns: repeat(6, 1fr); /* Use 6 virtual columns for finer control */
+      grid-template-columns: repeat(6, 1fr); 
     }
   
     /* Top row: 3 cards spanning 2 columns each */
@@ -136,3 +180,47 @@
     border-radius: 6px;
     margin-bottom: 0.5rem;
   }
+
+
+
+  /* Header styles */
+
+  .header-container {
+    text-align: center;
+    padding: 3rem 1rem;
+    background-color: #f7f4ef;
+    color: #3e2f1c;
+    font-family: 'Cinzel', serif;
+}
+
+.header-line {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.header-image {
+  width: 700px; 
+  height: auto; 
+  margin-top: 1rem;
+  border-radius: 8px; 
+}
+
+@media (max-width: 600px) {
+  .header-image {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-image {
+    width: 90%;
+  }
+}
