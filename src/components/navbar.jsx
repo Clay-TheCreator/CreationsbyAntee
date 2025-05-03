@@ -13,7 +13,10 @@ function Navbar() {
             Home
           </Link>
         </div>
-        <div className="logo">Creations by Antee</div>
+        <div className="logo">
+          <img src="src/assets/froglogo2.png" alt="logo" className="logo-icon" />
+          Creations by Antee
+        </div>
         <div className={`nav-right ${menuOpen ? "open" : ""}`}>
           <Link to="/about" className="nav-link">
             About

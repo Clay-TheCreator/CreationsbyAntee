@@ -15,7 +15,7 @@ function Home() {
       />
       <Header />
       <PopularItems />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

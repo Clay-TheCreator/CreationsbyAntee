@@ -11,16 +11,30 @@ function Footer() {
           </p>
         </div>
         <div className="footer-center">
-          <ul className="footer-links">
-            <li>
-              <Link to="/about" className="footer-link">
-                About Us
-              </Link>
+        <ul className="footer-links">
+            <li className="footer-item">
+            <span className="footer-icon-wrapper">
+              <img 
+                src="src/assets/froglogo2.png" 
+                alt="About Us Icon"
+                className="footer-icon"
+              />
+            </span>
+
+              <Link to="/about" className="footer-link">About Us</Link>
+              <span className="footer-icon-wrapper">
+              <img 
+                src="src/assets/froglogo2.png" 
+                alt="About Us Icon"
+                className="footer-icon"
+              />
+              </span>
+
             </li>
-            <li>
-              <Link to="/contact" className="footer-link">
-                Contact
-              </Link>
+            <li className="footer-item">
+              
+              <Link to="/contact" className="footer-link">Contact</Link>
+              
             </li>
           </ul>
         </div>

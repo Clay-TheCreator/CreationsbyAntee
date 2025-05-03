@@ -1,3 +1,8 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
 /* Navbar Styling */
 .navbar {
   position: sticky;
@@ -30,6 +35,16 @@
   transform: translateX(-50%);
   font-size: 1.5rem;
   font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-icon {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+  border-radius: 50%; /* Optional: makes image round */
 }
 
 .nav-link {
@@ -111,22 +126,15 @@
   /* popular items container */
 
   .most-popular-container {
-    display: grid;
-    grid-template-columns: 1fr; 
-    gap: 3rem; 
-    justify-items: center;
-    margin-top: 1rem;
-    padding: 0 1rem;
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .most-popular-container {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: center;
+    margin-top: 1rem;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
   }
 
   .most-popular {
@@ -187,14 +195,15 @@
   text-align: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   width: 100%;
-  max-width: 180px;
-  flex: 0 0 auto;
+  max-width: 220px;
+  flex: 1 1 220px;
   cursor: pointer;
-  transition: box-shadow 0.3s ease; /* Smooth transition for shadow */
+  box-sizing: border-box;
+  transition: box-shadow 0.3s ease; 
 }
 
 .item-card:hover {
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); 
 }
 
 .item-image {
@@ -339,16 +348,24 @@ h1 {
 .footer-left p {
   font-size: 0.9rem;
   color: #4a5568;
+  font-family: sans-serif;
 }
 
 .footer-links {
   list-style-type: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
 }
 
-.footer-links li {
-  margin: 0.5rem 0;
+.footer-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
 
 .footer-link {
@@ -360,6 +377,13 @@ h1 {
 
 .footer-link:hover {
   color: #1e3a8a;
+}
+
+.footer-icon {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  border-radius: 50%;
 }
 
 .social-links {
@@ -395,6 +419,9 @@ h1 {
   }
 }
 
-.footer-copyright{
-  font-family: sans-serif;
+.footer-icon-wrapper {
+  background-color: #f7f4ef;
+  padding: 2px;
+  border-radius: 6px;
+  display: inline-block;
 }
