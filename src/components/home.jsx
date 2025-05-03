@@ -1,6 +1,7 @@
 import EventPopup from './eventpopup';
 import PopularItems from './popularitems';
 import Header from './header';
+import Footer from './footer';
 
 function Home() {
 
@@ -14,7 +15,7 @@ function Home() {
       />
       <Header />
       <PopularItems />
-      
+      <Footer />
     </div>
   );
 }

@@ -10,35 +10,35 @@ function PopularItems() {
       image: "src/assets/cedarRings.jpeg",
       description:
         "Handcrafted from real cedar roses with hypoallergenic hooks.",
-      summary: "lorem lorem lorem lorem lorem",
+      summary: "Cedar Jewelry",
     },
     {
       id: 2,
       title: "Cedar Rose Earrings",
       image: "src/assets/cedarRings.jpeg",
       description: "Elegant and lightweight for all-day wear.",
-      summary: "lorem lorem lorem lorem lorem",
+      summary: "Cedar Jewelry",
     },
     {
       id: 3,
       title: "Cedar Rose Earrings",
       image: "src/assets/cedarRings.jpeg",
       description: "Perfect for gifting or everyday elegance.",
-      summary: "lorem lorem lorem lorem lorem",
+      summary: "Cedar Jewelry",
     },
     {
       id: 4,
       title: "Cedar Rose Earrings",
       image: "src/assets/cedarRings.jpeg",
       description: "Nature-inspired beauty with modern charm.",
-      summary: "lorem lorem lorem lorem lorem",
+      summary: "Cedar Jewelry",
     },
     {
       id: 5,
       title: "Cedar Rose Earrings",
       image: "src/assets/cedarRings.jpeg",
       description: "Sustainably sourced and uniquely crafted.",
-      summary: "lorem lorem lorem lorem lorem",
+      summary: "Cedar Jewelry",
     },
   ];
 
