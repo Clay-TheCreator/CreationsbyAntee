@@ -18,6 +18,9 @@ function Navbar() {
           Creations by Antee
         </div>
         <div className={`nav-right ${menuOpen ? "open" : ""}`}>
+          <Link to="/items" className="nav-link">
+            Items
+          </Link>
           <Link to="/about" className="nav-link">
             About
           </Link>

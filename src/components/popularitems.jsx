@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from 'react-router-dom';
 
 function PopularItems() {
   const [selectedItem, setSelectedItem] = useState(null);
@@ -44,6 +45,12 @@ function PopularItems() {
 
   const handleClose = () => setSelectedItem(null);
 
+  const navigate = useNavigate();
+
+  const handleSeeMore = () => {
+    navigate('/items')
+  }
+
   // Close on Escape key
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -76,6 +83,9 @@ function PopularItems() {
             <p>{item.summary}</p>
           </div>
         ))}
+      </div>
+      <div className="seemore-container">
+        <button className="seemore-btn" onClick={handleSeeMore}>See More</button>
       </div>
 
       {/* popup */}

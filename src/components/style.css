@@ -230,6 +230,31 @@ body {
   color: #4a5568;
 }
 
+.seemore-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.seemore-btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #3e2f1c;
+  font-family: inherit;
+}
+
+.seemore-btn:hover {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  background-color: #edf2f7;
+  transform: scale(1.03);
+}
+
 .popup-overlay {
   position: fixed;
   top: 0;
