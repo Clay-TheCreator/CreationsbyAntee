@@ -121,8 +121,92 @@ body {
     margin: 0.25rem 0;
   }
 
+  /* Header styles */
 
-
+  .header-card {
+    background-color: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+  }
+  
+  .header-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+  }
+  
+  .header-text {
+    flex: 1;
+    min-width: 280px;
+    font-family: 'Cinzel', serif;
+    color: #3e2f1c;
+  }
+  
+  .header-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+  }
+  
+  .header-subtitle {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .header-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  
+  .header-link {
+    text-decoration: none;
+    font-weight: 500;
+    color: #1a202c;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s;
+  }
+  
+  .header-link:hover {
+    border-color: #1a202c;
+  }
+  
+  .header-image-wrapper {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .header-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  /* Responsive stacking */
+  @media (max-width: 768px) {
+    .header-content {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .header-image-wrapper {
+      justify-content: center;
+    }
+  
+    .header-image {
+      max-width: 90%;
+    }
+  }
   /* popular items container */
 
   .most-popular-container {
@@ -305,47 +389,6 @@ body {
   to { opacity: 1; transform: scale(1); }
 }
 
-  /* Header styles */
-
-  .header-container {
-    text-align: center;
-    padding: 3rem 1rem;
-    background-color: #f7f4ef;
-    color: #3e2f1c;
-    font-family: 'Cinzel', serif;
-}
-
-.header-line {
-    display: block;
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    letter-spacing: 1px;
-}
-
-h1 {
-    font-size: 1.5rem;
-    font-weight: 400;
-}
-
-.header-image {
-  width: 700px; 
-  height: auto; 
-  margin-top: 1rem;
-  border-radius: 8px; 
-}
-
-@media (max-width: 600px) {
-  .header-image {
-    width: 90%;
-  }
-}
-
-@media (max-width: 768px) {
-  .header-image {
-    width: 90%;
-  }
-}
 
 
 /* Footer Styling */

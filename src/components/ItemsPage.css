@@ -9,13 +9,12 @@
   /* Sidebar styles */
   .items-sidebar {
     width: 220px;
-    background-color: #f8fafc;
-    border: 1px solid #e2e8f0;
     border-radius: 8px;
     padding: 1rem;
     height: fit-content;
     position: sticky;
-    top: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
   }
   
   .items-sidebar h2 {
@@ -51,31 +50,44 @@
     flex: 1;
   }
   
-  /* Reuse your item-card and item-image styles */
+  /* Card styles */
   .item-card {
     background-color: #f8fafc;
     border: 1px solid #e2e8f0;
     border-radius: 8px;
-    padding: 1rem;
+    overflow: hidden;
+    padding: 0;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     cursor: pointer;
     transition: box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
   }
   
   .item-card:hover {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
   }
   
-  .item-image {
+  /* Image wrapper ensures consistent size */
+  .image-wrapper {
     width: 100%;
-    height: 240px;
-    object-fit: cover;
+    height: 200px;
+    overflow: hidden;
     border-radius: 6px;
     margin-bottom: 0.5rem;
+  }
+  
+  /* Image fits perfectly */
+  .item-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     transition: transform 0.3s ease;
   }
   
   .item-card:hover .item-image {
     transform: scale(1.05);
   }
+  
