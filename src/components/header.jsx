@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Header() {
   return (
     <div className="header-card">
@@ -11,7 +13,7 @@ function Header() {
             labore, nostrum saepe quidem cumque amet quaerat! Quia, voluptates
             iusto?
           </p>
-          {/* <Link to="/about" className="header-link">Read more about us</Link> */}
+          <Link to="/about" className="header-link">Read more about us</Link>
         </div>
         <div className="header-image-wrapper">
           <img

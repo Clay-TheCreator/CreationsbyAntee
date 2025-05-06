@@ -48,7 +48,7 @@ function PopularItems() {
   const navigate = useNavigate();
 
   const handleSeeMore = () => {
-    navigate('/items')
+    navigate('/shop')
   }
 
   // Close on Escape key

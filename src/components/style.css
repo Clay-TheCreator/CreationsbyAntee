@@ -224,14 +224,14 @@ body {
   
   .header-link {
     text-decoration: none;
-    font-weight: 500;
-    color: #1a202c;
+    font-weight: 550;
+    color: #3e2f1c;
     border-bottom: 1px solid transparent;
     transition: border-color 0.3s;
   }
   
   .header-link:hover {
-    border-color: #1a202c;
+    border-color: #3e2f1c;
   }
   
   .header-image-wrapper {
