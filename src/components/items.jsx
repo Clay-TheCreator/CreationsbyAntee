@@ -4,7 +4,7 @@ import './ItemsPage.css';
 
 
 
-function Items({ itemsAll }) {
+function Shop({ itemsAll }) {
     const { category } = useParams();
   
     // Filter items based on category param
@@ -20,16 +20,16 @@ function Items({ itemsAll }) {
           <h2>Categories</h2>
           <ul>
             <li>
-              <Link to="/items">All Items</Link>
+              <Link to="/shop">All Items</Link>
             </li>
             <li>
-              <Link to="/items/cedar">Cedar</Link>
+              <Link to="/shop/cedar">Cedar</Link>
             </li>
             <li>
-              <Link to="/items/wellness-oils">Wellness Oils</Link>
+              <Link to="/shop/wellness-oils">Wellness Oils</Link>
             </li>
             <li>
-              <Link to="/items/jewelry">Jewelry</Link>
+              <Link to="/shop/jewelry">Jewelry</Link>
             </li>
           </ul>
         </aside>
@@ -57,4 +57,4 @@ function Items({ itemsAll }) {
     );
   }
 
-export default Items;
+export default Shop;

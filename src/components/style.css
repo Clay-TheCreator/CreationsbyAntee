@@ -8,7 +8,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 1000;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #3e2f1c;
   background-color: #f7f4ef;
   padding: 1rem 2rem;
 }
@@ -20,7 +20,8 @@ body {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 2rem;
 }
 
 .nav-left, .nav-right {
@@ -49,10 +50,17 @@ body {
 
 .nav-link {
   text-decoration: none;
-  color: black;
-  font-size: 1rem;
+  color: #3e2f1c;
+  font-size: 1.2rem;
+  font-weight: 550;
+  position: relative;
+  transition: color 0.3s;
 }
 
+.nav-link:hover {
+  text-decoration: underline;
+  color: #3e2f1c;
+}
 
 /* Mobile Navbar styles */
 .nav-right {
@@ -61,11 +69,12 @@ body {
   align-items: flex-start;
   position: absolute;
   top: 100%;
-  right: 0;
+  left: 0;
   background-color: #f7f4ef;
   padding: 1rem;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 999;
+  width: 200pxf;
 }
 
 /* Show nav-right only if menuOpen is true */
@@ -89,6 +98,54 @@ body {
   }
 }
   
+
+.nav-dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  background: none;
+  border: none;
+  font-family: 'Cinzel', serif;
+  font-size: 1.2rem;
+  font-weight: 550;
+  color: #3e2f1c;
+  cursor: pointer;
+  padding: 0;
+}
+
+.dropdown-menu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 100%; 
+  left: 0;
+  background-color: #f7f4ef;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 1rem;
+  z-index: 1000;
+  border-radius: 6px;
+  min-width: 160px;
+  border: 1px solid #d6d2cb;
+}
+
+.nav-dropdown:hover .dropdown-menu {
+  display: flex;
+}
+
+.dropdown-item {
+  text-decoration: none;
+  color: #3e2f1c;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.5rem 0;
+  display: block;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dropdown-item:hover {
+  text-decoration: underline;
+}
 
 /* Home Styling */
 .home-wrapper {
@@ -137,7 +194,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
-    align-items: center;
+    align-items: flex-start;
   }
   
   .header-text {
@@ -395,7 +452,7 @@ body {
 .footer {
   background-color: #f7f4ef;
   padding: 2rem 0;
-  border-top: 1px solid #e2e8f0;
+  border-top: 1px solid #d6d2cb;
 }
 
 .footer-container {
