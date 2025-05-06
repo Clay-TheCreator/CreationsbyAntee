@@ -17,6 +17,7 @@ function Navbar() {
         !dropdownRef.current.contains(event.target)
       ) {
         setDropdownOpen(false);
+        // setMenuOpen(false);
       }
     }
 

@@ -1,9 +1,8 @@
-import { useState, useEffect } from "react";
-import { useNavigate } from 'react-router-dom';
+import { useState, useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
+import "./PopularItems.css";
 
 function PopularItems() {
-  const [selectedItem, setSelectedItem] = useState(null);
-
   const popularItems = [
     {
       id: 1,
@@ -43,15 +42,37 @@ function PopularItems() {
     },
   ];
 
+  const [selectedItem, setSelectedItem] = useState(null);
+  const scrollRef = useRef(null);
+  const [currentPage, setCurrentPage] = useState(0);
+
+  const itemWidth = 250;
+  const itemsPerPage = 4.5;
+  const totalPages = Math.ceil(popularItems.length / itemsPerPage);
+
   const handleClose = () => setSelectedItem(null);
 
-  const navigate = useNavigate();
+  const handleScroll = (direction) => {
+    const container = scrollRef.current;
+    const scrollAmount = itemWidth * itemsPerPage;
 
-  const handleSeeMore = () => {
-    navigate('/shop')
-  }
+    if (direction === "left") {
+      container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+      setCurrentPage((prev) => Math.max(prev - 1, 0));
+    } else {
+      container.scrollBy({ left: scrollAmount, behavior: "smooth" });
+      setCurrentPage((prev) => Math.min(prev + 1, totalPages - 1));
+    }
+  };
 
-  // Close on Escape key
+  const handleDotClick = (index) => {
+    scrollRef.current.scrollTo({
+      left: itemWidth * itemsPerPage * index,
+      behavior: "smooth",
+    });
+    setCurrentPage(index);
+  };
+
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key === "Escape") {
@@ -69,30 +90,63 @@ function PopularItems() {
   }, [selectedItem]);
 
   return (
-    <>
-      <h1 className="most-popular">Most Popular</h1>
-      <div className="most-popular-container">
-        {popularItems.map((item) => (
-          <div
-            className="item-card"
-            key={item.id}
-            onClick={() => setSelectedItem(item)}
-          >
-            <img src={item.image} alt={item.title} className="item-image" />
-            <h2>{item.title}</h2>
-            <p>{item.summary}</p>
-          </div>
-        ))}
-      </div>
-      <div className="seemore-container">
-        <button className="seemore-btn" onClick={handleSeeMore}>See More</button>
+    <section className="popular-section">
+      <h1 className="popular-title">Most Popular</h1>
+
+      <div className="carousel-wrapper">
+        <button
+          className="scroll-btn left"
+          onClick={() => handleScroll("left")}
+        >
+          ‹
+        </button>
+
+        <div className="popular-scroll-container" ref={scrollRef}>
+          {popularItems.map((item) => (
+            <div
+              key={item.id}
+              className="popular-card"
+              onClick={() => setSelectedItem(item)}
+            >
+              <img
+                src={item.image}
+                alt={item.title}
+                className="popular-image"
+              />
+              <h2>{item.title}</h2>
+              <p>{item.summary}</p>
+            </div>
+          ))}
+        </div>
+
+        <button
+          className="scroll-btn right"
+          onClick={() => handleScroll("right")}
+        >
+          ›
+        </button>
       </div>
 
-      {/* popup */}
+      {totalPages > 0 && (
+        <div className="scroll-dots">
+          {Array.from({ length: totalPages }).map((_, i) => (
+            <span
+              key={i}
+              className={`dot ${i === currentPage ? "active" : ""}`}
+              onClick={() => handleDotClick(i)}
+            />
+          ))}
+        </div>
+      )}
+
       {selectedItem && (
         <div className="popup-overlay" onClick={handleClose}>
           <div className="popup-content" onClick={(e) => e.stopPropagation()}>
-            <button className="popup-close" onClick={handleClose}>
+            <button
+              className="popup-close"
+              onClick={handleClose}
+              aria-label="Close popup"
+            >
               ✕
             </button>
             <img
@@ -105,7 +159,7 @@ function PopularItems() {
           </div>
         </div>
       )}
-    </>
+    </section>
   );
 }
 
