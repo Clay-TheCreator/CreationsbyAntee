@@ -1,8 +1,9 @@
 import { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import "./PopularItems.css";
 
-function PopularItems() {
+function PopularItems({ category, shopCategory }) {
   const popularItems = [
     {
       id: 1,
@@ -36,6 +37,34 @@ function PopularItems() {
     {
       id: 5,
       title: "Cedar Rose Earrings",
+      image: "src/assets/cedarRings.jpeg",
+      description: "Sustainably sourced and uniquely crafted.",
+      summary: "Cedar Jewelry",
+    },
+    {
+      id: 6,
+      title: "Cedar Rose ",
+      image: "src/assets/cedarRings.jpeg",
+      description: "Sustainably sourced and uniquely crafted.",
+      summary: "Cedar Jewelry",
+    },
+    {
+      id: 7,
+      title: "Cedar Rose ",
+      image: "src/assets/cedarRings.jpeg",
+      description: "Sustainably sourced and uniquely crafted.",
+      summary: "Cedar Jewelry",
+    },
+    {
+      id: 8,
+      title: "Cedar Rose ",
+      image: "src/assets/cedarRings.jpeg",
+      description: "Sustainably sourced and uniquely crafted.",
+      summary: "Cedar Jewelry",
+    },
+    {
+      id: 9,
+      title: "Cedar Rose ",
       image: "src/assets/cedarRings.jpeg",
       description: "Sustainably sourced and uniquely crafted.",
       summary: "Cedar Jewelry",
@@ -91,7 +120,12 @@ function PopularItems() {
 
   return (
     <section className="popular-section">
-      <h1 className="popular-title">Most Popular</h1>
+      <div className="popular-header">
+        <h1 className="popular-title">{category}</h1>
+        <Link to="/shop/cedar" className="shop-link">
+          {shopCategory} » 
+        </Link>
+      </div>
 
       <div className="carousel-wrapper">
         <button

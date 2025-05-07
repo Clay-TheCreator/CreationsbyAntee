@@ -14,7 +14,8 @@ function Home() {
         address="999 Canada Pl, Vancouver, BC V6C 3T4"
       />
       <Header />
-      <PopularItems />
+      <PopularItems category='Cedar Collection' shopCategory="Shop Cedar Collection"/>
+      <PopularItems category="Wellness Oils Collection" shopCategory="Wellness Oils Collection"/>
       {/* <Footer /> */}
     </div>
   );

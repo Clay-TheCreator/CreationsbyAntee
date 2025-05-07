@@ -1,15 +1,35 @@
 /* SECTION TITLE */
+.popular-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 0 2.5rem;
+}
+
 .popular-title {
-    text-align: center;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.shop-link {
+  font-size: 1.1rem;
+  color: #3e2f1c;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.shop-link:hover {
+  color: #3e2f1c;
+  text-decoration: underline;
+}
   
   /* OUTER WRAPPER */
   .popular-section {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 1rem;
+    padding: 0 1rem;
     box-sizing: border-box;
   }
 
@@ -126,8 +146,9 @@
   .scroll-dots {
     display: flex;
     justify-content: center;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     gap: 0.5rem;
+    margin-bottom: 0.5rem;
   }
   
   .dot {
