@@ -60,6 +60,7 @@
     scrollbar-width: none;
     flex-grow: 1;
     margin: 0 2.5rem; /* Space for scroll buttons */
+    touch-action: pan-x;
   }
   
   .popular-scroll-container::-webkit-scrollbar {
@@ -68,7 +69,8 @@
   
   /* ITEM CARD */
   .popular-card {
-    flex: 0 0 calc(100% / 4.5);
+    flex: 0 0 calc(100%/4.5);
+    
     scroll-snap-align: start;
     background-color: #f8fafc;
     border: 1px solid #e2e8f0;
@@ -135,11 +137,11 @@
   }
   
   .scroll-btn.left {
-    left: 0;
+    left: 0.25rem;
   }
   
   .scroll-btn.right {
-    right: 0;
+    right: 0.25rem;
   }
   
   /* DOT NAVIGATION */
@@ -223,10 +225,10 @@
   
   /* RESPONSIVE DESIGN */
   
-  /* Tablet */
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     .popular-card {
-      width: calc(100% / 3);
+      
+      width: 160px;
       max-width: 200px;
     }
   
@@ -237,14 +239,43 @@
     }
   
     .popular-scroll-container {
+      max-width: 700px;
       margin: 0 2rem;
+    }
+  }
+  
+
+  /* Tablet */
+  @media (max-width: 768px) {
+    .popular-card {
+      width: 160px;
+      max-width: 200px;
+    }
+  
+    .scroll-btn {
+      width: 2rem;
+      height: 2rem;
+      font-size: 1.25rem;
+    }
+  
+    .popular-scroll-container {
+      max-width: 500px;
+      margin: 0 2rem;
+    }
+
+    .popular-title {
+      font-size: 1rem;
+    }
+
+    .shop-link{
+      font-size: 0.9rem;
     }
   }
   
   /* Phones */
   @media (max-width: 480px) {
     .popular-card {
-      width: calc(100% / 2);
+      width: 130px;
       max-width: 180px;
     }
   
@@ -256,5 +287,21 @@
   
     .popular-scroll-container {
       margin: 0 1.5rem;
+      max-width: 300px;
     }
+  }
+
+  @media (max-width: 320px) {
+    .popular-card {
+      width: 130px;
+      max-width: 150px;
+    }
+  
+    .scroll-btn {
+      width: 1.75rem;
+      height: 1.75rem;
+      font-size: 1.25rem;
+    }
+  
+    
   }

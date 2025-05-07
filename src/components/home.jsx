@@ -15,7 +15,7 @@ function Home() {
       />
       <Header />
       <PopularItems category='Cedar Collection' shopCategory="Shop Cedar Collection"/>
-      <PopularItems category="Wellness Oils Collection" shopCategory="Wellness Oils Collection"/>
+      <PopularItems category="Wellness Oils Collection" shopCategory="Shop Wellness Oils Collection"/>
       {/* <Footer /> */}
     </div>
   );

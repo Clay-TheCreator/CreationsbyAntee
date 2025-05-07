@@ -24,7 +24,8 @@ body {
   gap: 2rem;
 }
 
-.nav-left, .nav-right {
+.nav-left,
+.nav-right {
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -45,7 +46,7 @@ body {
   width: 45px;
   height: 45px;
   object-fit: contain;
-  border-radius: 50%; /* Optional: makes image round */
+  border-radius: 50%;
 }
 
 .nav-link {
@@ -62,7 +63,7 @@ body {
   color: #3e2f1c;
 }
 
-/* Mobile Navbar styles */
+/* Mobile & Tablet Navbar styles (up to 767px) */
 .nav-right {
   display: none;
   flex-direction: column;
@@ -74,16 +75,15 @@ body {
   padding: 1rem;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 999;
-  width: 200pxf;
+  width: 200px;
 }
 
-/* Show nav-right only if menuOpen is true */
 .nav-right.open {
   display: flex;
 }
 
-/* Desktop styles override */
-@media (min-width: 600px) {
+/* Desktop styles (768px and up) */
+@media (min-width: 768px) {
   .nav-right {
     display: flex !important;
     flex-direction: row;
@@ -97,8 +97,8 @@ body {
     display: none;
   }
 }
-  
 
+/* Dropdown Styling */
 .nav-dropdown {
   position: relative;
 }
@@ -112,13 +112,25 @@ body {
   color: #3e2f1c;
   cursor: pointer;
   padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.dropdown-toggle i {
+  transition: transform 0.3s ease;
+}
+
+/* Rotate the arrow icon on hover */
+.nav-dropdown:hover .dropdown-toggle i {
+  transform: rotate(180deg);
 }
 
 .dropdown-menu {
   position: absolute;
-  display: flex;
+  display: none;
   flex-direction: column;
-  top: 100%; 
+  top: 100%;
   left: 0;
   background-color: #f7f4ef;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
