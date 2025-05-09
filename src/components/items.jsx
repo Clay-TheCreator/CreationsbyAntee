@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import "./ItemsPage.css";
 import Popup from './Popup.jsx';
 
-function Shop({ itemsAll }) {
+function Collections({ itemsAll }) {
   const { category } = useParams();
   const [selectedItem, setSelectedItem] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -27,10 +27,10 @@ function Shop({ itemsAll }) {
       <aside className="items-sidebar">
         <h2>Categories</h2>
         <ul>
-          <li><Link to="/shop">All Items</Link></li>
-          <li><Link to="/shop/cedar">Cedar</Link></li>
-          <li><Link to="/shop/wellness-oils">Wellness Oils</Link></li>
-          <li><Link to="/shop/jewelry">Jewelry</Link></li>
+          <li><Link to="/collections">All Items</Link></li>
+          <li><Link to="/collections/cedar">Cedar</Link></li>
+          <li><Link to="/collections/wellness-oils">Wellness Oils</Link></li>
+          <li><Link to="/collections/jewelry">Jewelry</Link></li>
         </ul>
       </aside>
 
@@ -75,4 +75,4 @@ function Shop({ itemsAll }) {
   );
 }
 
-export default Shop;
+export default Collections;

@@ -3,74 +3,16 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import "./PopularItems.css";
 import Popup from './Popup.jsx'
+import itemsAll from "./itemsData.js";
 
-function PopularItems({ category, shopCategory }) {
-  const popularItems = [
-    {
-      id: 1,
-      title: "Cedar Rose Earrings",
-      image: "src/assets/cedarRings.jpeg",
-      description:
-        "Handcrafted from real cedar roses with hypoallergenic hooks.",
-      summary: "Cedar Jewelry",
-    },
-    {
-      id: 2,
-      title: "Cedar Rose Earrings",
-      image: "src/assets/cedarRings.jpeg",
-      description: "Elegant and lightweight for all-day wear.",
-      summary: "Cedar Jewelry",
-    },
-    {
-      id: 3,
-      title: "Cedar Rose Earrings",
-      image: "src/assets/cedarRings.jpeg",
-      description: "Perfect for gifting or everyday elegance.",
-      summary: "Cedar Jewelry",
-    },
-    {
-      id: 4,
-      title: "Cedar Rose Earrings",
-      image: "src/assets/cedarRings.jpeg",
-      description: "Nature-inspired beauty with modern charm.",
-      summary: "Cedar Jewelry",
-    },
-    {
-      id: 5,
-      title: "Cedar Rose Earrings",
-      image: "src/assets/cedarRings.jpeg",
-      description: "Sustainably sourced and uniquely crafted.",
-      summary: "Cedar Jewelry",
-    },
-    {
-      id: 6,
-      title: "Cedar Rose ",
-      image: "src/assets/cedarRings.jpeg",
-      description: "Sustainably sourced and uniquely crafted.",
-      summary: "Cedar Jewelry",
-    },
-    {
-      id: 7,
-      title: "Cedar Rose ",
-      image: "src/assets/cedarRings.jpeg",
-      description: "Sustainably sourced and uniquely crafted.",
-      summary: "Cedar Jewelry",
-    },
-    {
-      id: 8,
-      title: "Cedar Rose ",
-      image: "src/assets/cedarRings.jpeg",
-      description: "Sustainably sourced and uniquely crafted.",
-      summary: "Cedar Jewelry",
-    },
-    {
-      id: 9,
-      title: "Cedar Rose ",
-      image: "src/assets/cedarRings.jpeg",
-      description: "Sustainably sourced and uniquely crafted.",
-      summary: "Cedar Jewelry",
-    },
-  ];
+function PopularItems({ category, shopCollection, collection }) {
+  // Filter the items based on the provided category
+  const filteredItems = itemsAll.filter(item => 
+    category === "All Items" || item.category.toLowerCase() === category.toLowerCase()
+  );
+
+  // Limit the number of items to show (e.g., first 8 items)
+  const limitedItems = filteredItems.slice(0, 8);
 
   const [selectedItem, setSelectedItem] = useState(null);
   const scrollRef = useRef(null);
@@ -78,7 +20,7 @@ function PopularItems({ category, shopCategory }) {
 
   const itemWidth = 250;
   const itemsPerPage = 4.5;
-  const totalPages = Math.ceil(popularItems.length / itemsPerPage);
+  const totalPages = Math.ceil(limitedItems.length / itemsPerPage);
 
   const handleClose = () => setSelectedItem(null);
 
@@ -103,13 +45,12 @@ function PopularItems({ category, shopCategory }) {
     setCurrentPage(index);
   };
 
-
   return (
     <section className="popular-section">
       <div className="popular-header">
-        <h1 className="popular-title">{category}</h1>
-        <Link to="/shop/cedar" className="shop-link">
-          {shopCategory} » 
+        <h1 className="popular-title">{collection}</h1>
+        <Link to={`/collections/${category.toLowerCase()}`} className="shop-link">
+          {shopCollection} » 
         </Link>
       </div>
 
@@ -122,7 +63,7 @@ function PopularItems({ category, shopCategory }) {
         </button>
 
         <div className="popular-scroll-container" ref={scrollRef}>
-          {popularItems.map((item) => (
+          {limitedItems.map((item) => (
             <div
               key={item.id}
               className="popular-card"

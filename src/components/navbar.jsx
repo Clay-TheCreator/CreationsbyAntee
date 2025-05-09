@@ -31,13 +31,13 @@ function Navbar() {
               </span>
             </div>
             <div className="dropdown-menu">
-              <Link to="/shop/cedar" className="dropdown-item" onClick={handleNavClick}>
+              <Link to="/collections/cedar" className="dropdown-item" onClick={handleNavClick}>
                 Cedar
               </Link>
-              <Link to="/shop/wellness-oils" className="dropdown-item" onClick={handleNavClick}>
+              <Link to="/collections/wellness-oils" className="dropdown-item" onClick={handleNavClick}>
                 Wellness Oils
               </Link>
-              <Link to="/shop/jewelry" className="dropdown-item" onClick={handleNavClick}>
+              <Link to="/collections/jewelry" className="dropdown-item" onClick={handleNavClick}>
                 Jewelry
               </Link>
             </div>

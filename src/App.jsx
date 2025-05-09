@@ -4,7 +4,7 @@ import Home from "./components/home";
 import About from "./components/about";
 import Contact from "./components/contact";
 import Footer from "./components/footer";
-import Shop from "./components/items";
+import Collections from "./components/items";
 import itemsAll from "./components/itemsData";
 import ScrollToTop from "./components/scrolltotop";
 import PopularItems from "./components/popularitems";
@@ -21,10 +21,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Home itemsAll={itemsAll} />} />
           
-          <Route path="/shop" element={<Shop itemsAll={itemsAll} />} />
+          <Route path="/collections" element={<Collections itemsAll={itemsAll} />} />
           <Route
-            path="/shop/:category"
-            element={<Shop itemsAll={itemsAll} />}
+            path="/collections/:category"
+            element={<Collections itemsAll={itemsAll} />}
           />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
