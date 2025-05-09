@@ -85,6 +85,7 @@
   
   .popular-card:hover {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    background-color: #f1f5f9;
   }
   
   /* IMAGE */

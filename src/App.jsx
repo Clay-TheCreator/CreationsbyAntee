@@ -7,6 +7,7 @@ import Footer from "./components/footer";
 import Shop from "./components/items";
 import itemsAll from "./components/itemsData";
 import ScrollToTop from "./components/scrolltotop";
+import PopularItems from "./components/popularitems";
 
 import "./App.css";
 
@@ -18,7 +19,8 @@ function App() {
         <ScrollToTop />{" "}
         
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home itemsAll={itemsAll} />} />
+          
           <Route path="/shop" element={<Shop itemsAll={itemsAll} />} />
           <Route
             path="/shop/:category"

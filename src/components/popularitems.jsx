@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import "./PopularItems.css";
+import Popup from './Popup.jsx'
 
 function PopularItems({ category, shopCategory }) {
   const popularItems = [
@@ -102,21 +103,6 @@ function PopularItems({ category, shopCategory }) {
     setCurrentPage(index);
   };
 
-  useEffect(() => {
-    const handleKeyDown = (e) => {
-      if (e.key === "Escape") {
-        handleClose();
-      }
-    };
-
-    if (selectedItem) {
-      document.addEventListener("keydown", handleKeyDown);
-    }
-
-    return () => {
-      document.removeEventListener("keydown", handleKeyDown);
-    };
-  }, [selectedItem]);
 
   return (
     <section className="popular-section">
@@ -173,26 +159,7 @@ function PopularItems({ category, shopCategory }) {
         </div>
       )}
 
-      {selectedItem && (
-        <div className="popup-overlay" onClick={handleClose}>
-          <div className="popup-content" onClick={(e) => e.stopPropagation()}>
-            <button
-              className="popup-close"
-              onClick={handleClose}
-              aria-label="Close popup"
-            >
-              ✕
-            </button>
-            <img
-              src={selectedItem.image}
-              alt={selectedItem.title}
-              className="popup-image"
-            />
-            <h2>{selectedItem.title}</h2>
-            <p>{selectedItem.description}</p>
-          </div>
-        </div>
-      )}
+      <Popup item={selectedItem} onClose={handleClose} />
     </section>
   );
 }
