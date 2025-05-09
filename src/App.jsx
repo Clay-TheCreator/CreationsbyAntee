@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { Link, BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/navbar";
 import Home from "./components/home";
 import About from "./components/about";
@@ -17,7 +16,7 @@ function App() {
       <Router>
         <Navbar />
         <ScrollToTop />{" "}
-        {/* This will reset scroll position on every route change */}
+        
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/shop" element={<Shop itemsAll={itemsAll} />} />

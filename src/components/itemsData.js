@@ -1,80 +1,93 @@
-import cedarRings from '/src/assets/cedarRings.jpeg'
+import cedarRings from "/src/assets/cedarRings.jpeg";
+import bracelet1 from "/src/assets/bracelet1.jpg";
+import bracelet2 from "/src/assets/bracelet2.jpg";
+import bracelet3 from "/src/assets/bracelet3.jpg";
+import bracelet4 from "/src/assets/bracelet4.jpg";
+import bracelet5 from "/src/assets/bracelet5.jpg";
+import bracelet6 from "/src/assets/bracelet6.jpg";
+import spray1 from "/src/assets/spray1.jpg"
+import spray2 from "/src/assets/spray2.jpg"
+import spray3 from "/src/assets/spray3.jpg"
+import spray4 from "/src/assets/spray4.jpg"
+import spray5 from "/src/assets/spray5.jpg"
+
+
 
 const itemsAll = [
-    {
-        id: 1,
-        title: "Cedar Rose Earrings",
-        image: cedarRings,
-        category: 'Cedar',
-        description:
-          "Handcrafted from real cedar roses with hypoallergenic hooks.",
-        summary: "Cedar Jewelry",
-      },
-      {
-        id: 2,
-        title: "Cedar Rose Earrings",
-        image: cedarRings,
-        category: 'Cedar',
-        description: "Elegant and lightweight for all-day wear.",
-        summary: "Cedar Jewelry",
-      },
-      {
-        id: 3,
-        title: "Cedar Rose Earrings",
-        image: cedarRings,
-        category: 'Cedar',
-        description: "Perfect for gifting or everyday elegance.",
-        summary: "Cedar Jewelry",
-      },
-      {
-        id: 4,
-        title: "Cedar Rose Earrings",
-        image: cedarRings,
-        category: 'jewelry',
-        description: "Nature-inspired beauty with modern charm.",
-        summary: "Cedar Jewelry",
-      },
-      {
-        id: 5,
-        title: "Cedar Rose Earrings",
-        image: cedarRings,
-        category: 'jewelry',
-        description: "Sustainably sourced and uniquely crafted.",
-        summary: "Cedar Jewelry",
-      },
-      {
-        id: 6,
-        title: "Cedar Rose Earrings",
-        image: cedarRings,
-        category: 'Cedar',
-        description: "Sustainably sourced and uniquely crafted.",
-        summary: "Cedar Jewelry",
-      },
-      {
-        id: 7,
-        title: "Cedar Rose Earrings",
-        image: cedarRings,
-        category: 'wellness-oils',
-        description: "Sustainably sourced and uniquely crafted.",
-        summary: "Cedar Jewelry",
-      },
-      {
-        id: 8,
-        title: "Cedar Rose Earrings",
-        image: cedarRings,
-        category: 'Cedar',
-        description: "Sustainably sourced and uniquely crafted.",
-        summary: "Cedar Jewelry",
-      },
-      {
-        id: 9,
-        title: "Cedar Rose Earrings",
-        image: cedarRings,
-        category: 'wellness-oils',
-        description: "Sustainably sourced and uniquely crafted.",
-        summary: "Cedar Jewelry",
-      },
-    // ...more items
-  ];
-  
-  export default itemsAll;
+  {
+    id: 1,
+    title: "Cedar Rose Earrings",
+    image: cedarRings,
+    category: "Cedar",
+    description:
+      "Handcrafted from real cedar roses with hypoallergenic hooks.Elegant and lightweight for all-day wear.",
+    summary: "Cedar Jewelry",
+  },
+  {
+    id: 2,
+    title: "Bracelet",
+    image: bracelet1,
+    category: "Jewelry",
+    description: "Elegant and lightweight for all-day wear.",
+    summary: "Beaded Jewelry",
+  },
+  {
+    id: 3,
+    title: "Bracelet",
+    image: bracelet2,
+    category: "Jewelry",
+    description: "Perfect for gifting or everyday elegance.",
+    summary: "Beaded Jewelry",
+  },
+  {
+    id: 4,
+    title: "Cedar Rose Earrings",
+    image: cedarRings,
+    category: "jewelry",
+    description: "Nature-inspired beauty with modern charm.",
+    summary: "Cedar Jewelry",
+  },
+  {
+    id: 5,
+    title: "Cedar Rose Earrings",
+    image: cedarRings,
+    category: "jewelry", 
+    description: "Sustainably sourced and uniquely crafted.",
+    summary: "Cedar Jewelry",
+  },
+  {
+    id: 6,
+    title: "Bracelet",
+    image: bracelet3,
+    category: "Jewelry",
+    description: "Sustainably sourced and uniquely crafted.",
+    summary: "Beaded Jewelry",
+  },
+  {
+    id: 7,
+    title: "Bracelet",
+    image: bracelet4,
+    category: "Jewelry",
+    description: "Sustainably sourced and uniquely crafted.",
+    summary: "Beaded Jewelry",
+  },
+  {
+    id: 8,
+    title: "Bracelet",
+    image: bracelet5,
+    category: "Jewelry",
+    description: "Sustainably sourced and uniquely crafted.",
+    summary: "Beaded Jewelry",
+  },
+  {
+    id: 9,
+    title: "Bracelet",
+    image: bracelet6,
+    category: "Jewelry",
+    description: "Sustainably sourced and uniquely crafted.",
+    summary: "Beaded Jewelry",
+  },
+  // ...more items
+];
+
+export default itemsAll;
