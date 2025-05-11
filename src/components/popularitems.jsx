@@ -1,6 +1,6 @@
-import { useState, useEffect, useRef } from "react";
+import { useState,  useRef } from "react";
 import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+
 import "./PopularItems.css";
 import Popup from './Popup.jsx'
 import itemsAll from "./itemsData.js";
